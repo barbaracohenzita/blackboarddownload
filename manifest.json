@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Blackboard+ PDF Downloader",
+  "version": "1.0.0",
+  "description": "Bulk download PDFs from your Blackboard Learn courses. Scan all modules and download selected files at once.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://*.blackboard.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.blackboard.com/*"],
+      "js": ["content/downloader.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "Blackboard+ PDF Downloader"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["styles/panel.css"],
+      "matches": ["*://*.blackboard.com/*"]
+    }
+  ]
+}

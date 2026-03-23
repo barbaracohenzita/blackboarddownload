@@ -1,0 +1,79 @@
+/* popup.css — Blackboard+ PDF Downloader popup */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  width: 280px;
+  background: #111;
+  color: #e5e5e5;
+  font-size: 13px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+
+.header {
+  padding: 18px 20px;
+  background: #dc2626;
+  color: #fff;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+/* ── Body ─────────────────────────────────────────────────── */
+
+.body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #999;
+}
+
+.step strong {
+  color: #e5e5e5;
+}
+
+.num {
+  width: 22px;
+  height: 22px;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+
+.footer {
+  padding: 10px 20px;
+  border-top: 1px solid #222;
+}
+
+.version {
+  font-size: 11px;
+  color: #555;
+}
